@@ -1,0 +1,227 @@
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.body {
+    background-color: rgba(236, 238, 238, 0.307);
+}
+
+
+/* nav bar  */
+
+nav {
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.category {
+    margin-left: 10px;
+    font-size: x-large;
+    background-color: #cdd3ee94;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.nav_center ul {
+    position: relative;
+    top: 20px;
+    justify-content: space-between;
+}
+
+.nav_center ul a {
+    margin: 0 10px;
+    color: gray;
+    font-size: large;
+}
+
+.nav_right input {
+    outline: none;
+    border: 2px solid rgb(213, 211, 211);
+    padding-left: 10px;
+    border-radius: 6px;
+    height: 35px;
+    width: 225px;
+}
+
+.search {
+    position: relative;
+    margin: 0 10px;
+}
+
+input[type="search"] {
+    width: 100%;
+    padding-right: 30px;
+    text-decoration: none;
+    /* add space for icon */
+}
+
+.search-icon {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 50%;
+    color: rgb(213, 211, 211);
+    transform: translateY(-50%);
+}
+
+.contan {
+    margin: 20px;
+    justify-content: center;
+}
+
+.summary {
+    margin: 10px;
+    width: 700px;
+    background: url(../img/s.jpg);
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.summary::before {
+    content: '';
+    /* position: absolute; */
+    display: block;
+    height: 120px;
+    ;
+}
+
+.summary h1 {
+    font-size: 60px;
+}
+
+.summary .dis p {
+    color: rgb(152, 145, 145)
+}
+
+.dis .buttons a {
+    margin: 0 10px
+}
+
+.category_list {
+    width: 80%;
+    margin: auto;
+}
+
+.category_list ul {
+    justify-content: space-between;
+}
+
+.category_list ul a {
+    margin: 10px;
+    width: 200px;
+    padding: 20px;
+    color: black;
+    text-align: center;
+    border-radius: 8px
+}
+
+.famous_book_title h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.famous_book_title h6 {
+    font-size: 20px;
+    color: rgb(118, 113, 113);
+    background-color: rgb(200, 223, 241);
+    padding: 15px;
+}
+
+.book {
+    width: 278px;
+    /* background-color: aqua; */
+    overflow: hidden;
+    border: 1px solid silver;
+}
+
+.book .book_content {
+    padding: 10px;
+}
+
+.book .book_content span {
+    background-color: rgb(218, 250, 250);
+    color: rgb(70, 171, 171);
+    padding: 5px;
+}
+
+.book .book_content small {
+    color: silver;
+    font-size: 15px;
+}
+
+
+/* FontAwesome library for search icon */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/* utils start */
+
+.d_flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.w-80 {
+    width: 80%;
+    margin: auto;
+}
+
+.circle {
+    height: 48px;
+    border-radius: 50% !important;
+}
+
+.align_center {
+    align-items: center;
+}
+
+.tex_center {
+    text-align: center;
+}
+
+.space_between {
+    justify-content: space-between;
+}
+
+.b_radius {
+    border-radius: 8px !important;
+}
+
+
+/* utils end  */
+
+
+/* phone styles  */
+
+
+/* @media only screen and (max-width: 480px) {
+    .nav_center {
+        display: flex;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        width: fit-content;
+    }
+    .nav_right {
+        width: fit-content;
+        margin: auto;
+        justify-content: space-between;
+    }
+    .nav_right,
+    .search,
+    .my_account {
+        margin: 0 20px;
+    }
+} */
+
+
+/* hover  */
+
+.book:hover {
+    box-shadow: 6px 6px 8px 6px silver;
+}
