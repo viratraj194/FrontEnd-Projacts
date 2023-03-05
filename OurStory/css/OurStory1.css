@@ -140,19 +140,66 @@ input[type="search"] {
     border: 1px solid silver;
 }
 
+.book_card {
+    width: 278px;
+    /* background-color: aqua; */
+    overflow: hidden;
+    border: 1px solid silver;
+    margin-right: 20px;
+    flex-shrink: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
 .book .book_content {
     padding: 10px;
 }
 
-.book .book_content span {
+.book_card .book_content {
+    padding: 10px;
+}
+
+.book_content span {
     background-color: rgb(218, 250, 250);
     color: rgb(70, 171, 171);
     padding: 5px;
 }
 
-.book .book_content small {
+.book_content small {
     color: silver;
     font-size: 15px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 101%;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.be_writer {
+    height: 200px;
+    width: 80%;
+    /* justify-content: center; */
+    padding: 50px;
+    margin: 100px auto;
+    align-items: center;
+    background-image: url(../img/bg3.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.be_writer h5 {
+    font-size: 30px;
+}
+
+.be_writer .d_flex {
+    justify-content: space-between;
+}
+
+.be_writer span {
+    width: 698px;
 }
 
 
@@ -163,7 +210,7 @@ input[type="search"] {
 /* utils start */
 
 .d_flex {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
 }
 
@@ -199,8 +246,7 @@ input[type="search"] {
 
 /* phone styles  */
 
-
-/* @media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     .nav_center {
         display: flex;
         box-sizing: border-box;
@@ -217,7 +263,10 @@ input[type="search"] {
     .my_account {
         margin: 0 20px;
     }
-} */
+    .be_writer {
+        height: 408px;
+    }
+}
 
 
 /* hover  */
