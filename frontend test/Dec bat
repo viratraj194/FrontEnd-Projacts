@@ -1,0 +1,27 @@
+@echo off
+set "key_file=key.key"
+set "ignore_files=encrypt.bat decrypt.bat %key_file%"
+
+:: Check if the key exists
+if not exist %key_file% (
+    echo Key file not found! Decryption cannot continue.
+    exit /b
+)
+
+for %%f in (*.enc) do (
+    set "current_file=%%f"
+    call :check_ignore %%f
+)
+
+exit /b
+
+:check_ignore
+for %%i in (%ignore_files%) do (
+    if /i "%~nx1"=="%%i" exit /b
+)
+
+:: Decrypt the file
+echo Decrypting %~nx1...
+openssl enc -d -aes-256-cbc -in "%~nx1" -out "%~n1" -pass file:%key_file%
+del "%~nx1"
+exit /b
